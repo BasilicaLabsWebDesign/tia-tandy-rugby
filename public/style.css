@@ -444,6 +444,8 @@ footer{background:#000;color:var(--paper);padding:48px 0 36px;border-top:1px sol
 .foot-links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
 .foot-links a{font-family:var(--cond);font-weight:500;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
 .foot-links a:hover{color:var(--gold)}
+.built-by a{color:var(--gold);text-decoration:none}
+.built-by a:hover{color:var(--gold-2);text-decoration:underline}
 .foot-fine{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:#7C766B;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 /* ---- responsive ---- */
