@@ -5,13 +5,16 @@ Dartford (tiatandyrugby.com). No build step, no dependencies. Two
 versions are maintained, with no links between them:
 
 - **The public site** — multi-page, black-and-gold, served at the
-  domain root: `public/index.html`, `bio.html`, `union/`, `league/`,
-  `achievements`, `pictures`, `sponsors`, `my-rugby-life`, `videos`,
-  plus the hosted partnership pack (`partnership-pack.html` and
-  `files/Tia_Tandy_Partnership_Pack.pdf`). Pages are generated from a
-  shared template script; `public/style.css` holds the look. The
-  homepage carries a Next Match band (TBA until the owner supplies
-  fixture details — set NEXT_MATCH in the generator).
+  domain root: `public/index.html`, `bio.html`, `fixtures.html`,
+  `match-reviews.html`, `achievements.html`, `pictures.html`,
+  `sponsors.html`, `my-rugby-life.html`, `videos.html`, a page per
+  club under `union/` and `league/`, plus the partnership pack PDF
+  (`files/Tia_Tandy_Partnership_Pack.pdf`) and self-hosted match
+  video in `video/`. `public/style.css` holds the look. The homepage
+  Next Match band reads an inline fixture list in `public/index.html`
+  and shows the first fixture from today onwards, falling back to
+  "Fixture details coming soon"; the full list is written out on
+  `fixtures.html`, so a fixture change means updating both.
 - **The one-pager** — the original navy/chalk/red match-programme
   page, unlisted at `/v2/` (`public/v2/index.html`) by owner
   instruction. Keep its facts in step, condensed to suit the
@@ -19,6 +22,15 @@ versions are maintained, with no links between them:
   change its design language.
 
 Shared photos and sponsor logos live in `public/img/`.
+
+There is no template or page generator: every page is plain HTML,
+edited in place. The nav and footer are repeated in all 18 public-site
+pages — 9 at the top of `public/`, 6 in `public/union/` and 3 in
+`public/league/` — so a site-wide change such as a nav or footer edit
+means editing every one of them, and a new page also joins the nav,
+the footer and `public/sitemap.xml`. The only script,
+`tools/build_pack_partners_page.py`, rebuilds the Numbers and Current
+Partners pages of the partnership-pack PDF and splices them back in.
 
 ## Deployment
 
