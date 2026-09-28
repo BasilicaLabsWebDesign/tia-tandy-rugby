@@ -325,6 +325,7 @@ a.logo-slot:hover,.logo-slot:hover{border-color:var(--gold-line);color:var(--gol
 .review-chips{margin-top:18px}
 .chip.gold{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#0B0B0C;border-color:var(--gold);font-weight:700}
 .review-video{max-width:430px;margin:28px auto 6px}
+.review-video.wide{max-width:720px}
 .review-video video{width:100%;display:block;background:#000;border:1px solid var(--gold-line);border-bottom:4px solid var(--gold);border-radius:4px}
 .review-body{max-width:720px;margin:22px auto 0}
 .review-body p{margin-bottom:16px;color:var(--paper)}
