@@ -35,8 +35,10 @@ every one of them, and a new page also joins the nav, the footer and
 top of `match-reviews.html` and a sitemap entry, with its clip in
 `video/`, its poster frame in `img/` and, where the poster doesn't crop
 well to the card's 16:10 thumbnail, a trimmed `-thumb` copy beside it.
-The only script,
-`tools/build_pack_partners_page.py`, rebuilds the Numbers and Current
+Its chips carry the result and anything notable on the day (a try, an
+award) but never her position: she always plays hooker, so it goes
+without saying. The only script, `tools/build_pack_partners_page.py`,
+rebuilds the Numbers and Current
 Partners pages of the partnership-pack PDF and splices them back in.
 
 ## Deployment
