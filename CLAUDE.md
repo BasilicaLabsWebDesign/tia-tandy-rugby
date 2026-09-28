@@ -6,7 +6,8 @@ versions are maintained, with no links between them:
 
 - **The public site** — multi-page, black-and-gold, served at the
   domain root: `public/index.html`, `bio.html`, `fixtures.html`,
-  `match-reviews.html`, `achievements.html`, `pictures.html`,
+  `match-reviews.html` (an index of cards, each linking to that game's
+  own page in `match-reviews/`), `achievements.html`, `pictures.html`,
   `sponsors.html`, `my-rugby-life.html`, `videos.html`, a page per
   club under `union/` and `league/`, plus the partnership pack PDF
   (`files/Tia_Tandy_Partnership_Pack.pdf`) and self-hosted match
@@ -24,11 +25,17 @@ versions are maintained, with no links between them:
 Shared photos and sponsor logos live in `public/img/`.
 
 There is no template or page generator: every page is plain HTML,
-edited in place. The nav and footer are repeated in all 18 public-site
-pages — 9 at the top of `public/`, 6 in `public/union/` and 3 in
-`public/league/` — so a site-wide change such as a nav or footer edit
-means editing every one of them, and a new page also joins the nav,
-the footer and `public/sitemap.xml`. The only script,
+edited in place. The nav and footer are repeated in every public-site
+page — 9 at the top of `public/`, 6 in `public/union/`, 3 in
+`public/league/`, plus one per match review in `public/match-reviews/`
+— so a site-wide change such as a nav or footer edit means editing
+every one of them, and a new page also joins the nav, the footer and
+`public/sitemap.xml`. A new match review instead gets its own page in
+`public/match-reviews/` named `<opponent>-<date>.html`, a card at the
+top of `match-reviews.html` and a sitemap entry, with its clip in
+`video/`, its poster frame in `img/` and, where the poster doesn't crop
+well to the card's 16:10 thumbnail, a trimmed `-thumb` copy beside it.
+The only script,
 `tools/build_pack_partners_page.py`, rebuilds the Numbers and Current
 Partners pages of the partnership-pack PDF and splices them back in.
 
