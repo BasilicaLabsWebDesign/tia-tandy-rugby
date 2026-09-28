@@ -183,10 +183,16 @@ h1,.section-head h2{font-family:var(--display);font-weight:400;text-transform:up
 /* ---- partners band ---- */
 .partners-band{background:#0E0E12;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0 44px}
 .band-label{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-/* Ten main partners set as two even rows of five; the phone/tablet grids below
-   drop to two columns and then one. */
-.logo-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+/* Eleven main partners set as a balanced 4 + 4 + 3 (12-col grid: eight span-3s, then three
+   wider span-4s). Desktop-only — the tablet grid below drops to two columns, centring the
+   odd one out, and phones take one. */
+.logo-row{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+@media (min-width:981px){
+  .logo-row>.logo-slot{grid-column:span 4}
+  .logo-row>.logo-slot:nth-child(-n+8){grid-column:span 3}
+}
 .logo-row.small{grid-template-columns:repeat(3,1fr)}
+.logo-row.small>.logo-slot{grid-column:auto}
 .logo-slot{
   border:1px solid var(--line);color:var(--muted);background:var(--panel);border-radius:6px;
   min-height:110px;display:grid;place-items:center;text-decoration:none;
@@ -454,6 +460,9 @@ footer{background:#000;color:var(--paper);padding:48px 0 36px;border-top:1px sol
   .home-grid,.club-grid{grid-template-columns:1fr;gap:36px}
   .cards,.gallery,.logo-row,.logo-row.small{grid-template-columns:1fr 1fr}
   .video-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:721px) and (max-width:980px){
+  .logo-row:not(.small)>.logo-slot:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}
 }
 @media (max-width:720px){
   .section{padding:48px 20px 72px}

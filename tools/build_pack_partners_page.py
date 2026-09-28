@@ -30,6 +30,7 @@ PARTNERS = [
     ("logo-primova.png", "@primovaplus", ""),  # strapline lives in the logo itself
     ("logo-bodymasters.png", "@the_body_masters", "Sports injury &amp; physio"),
     ("logo-katesclothing.png", "@katesclothinghq", ""),
+    ("logo-biobnd.png", "@getbiobnd", ""),
 ]
 SUPPORTERS = [
     ("logo-jackvenom.jpg", "@jackvenomco"),
@@ -104,7 +105,11 @@ body{background:#333;font-family:'Barlow';color:var(--paper)}
   text-transform:uppercase;color:var(--muted)}
 .moment{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
 .prow{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm}
-.prow.main{grid-template-columns:repeat(5,1fr);gap:3mm}
+/* eleven main partners as a balanced 6 + 5 (30-col grid: six span-5s, then five span-6s) —
+   a third row would push the page into its footer */
+.prow.main{grid-template-columns:repeat(30,1fr);gap:3mm}
+.prow.main .pcardx{grid-column:span 6}
+.prow.main .pcardx:nth-child(-n+6){grid-column:span 5}
 .pcardx{border:1px solid var(--line);background:var(--panel);border-radius:2mm;padding:4mm 3mm;
   display:flex;flex-direction:column;align-items:center;gap:2mm;justify-content:center}
 .pcardx img{max-height:12mm;max-width:85%;object-fit:contain}
