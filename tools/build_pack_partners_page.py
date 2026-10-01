@@ -42,7 +42,7 @@ SUPPORTERS = [
 
 IG_STATS = [
     ("8K+", "Followers"),
-    ("250&ndash;280K", "Monthly reach"),
+    ("445K+", "Monthly views"),
     ("4&ndash;5K", "Monthly interactions"),
     ("5K", "Avg. views per reel"),
     ("100K+", "Best-performing reel"),
