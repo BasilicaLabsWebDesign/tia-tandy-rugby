@@ -30,7 +30,6 @@ PARTNERS = [
     ("logo-primova.png", "@primovaplus", ""),  # strapline lives in the logo itself
     ("logo-bodymasters.png", "@the_body_masters", "Sports injury &amp; physio"),
     ("logo-katesclothing.png", "@katesclothinghq", ""),
-    ("logo-biobnd.png", "@getbiobnd", ""),
 ]
 SUPPORTERS = [
     ("logo-jackvenom.jpg", "@jackvenomco"),
@@ -38,6 +37,8 @@ SUPPORTERS = [
     ("logo-enduo.jpg", "@enduosports"),
     ("logo-b4sleep.jpg", "@b4sleep_"),
     ("logo-funkoff.jpg", "@funkoffpro"),
+    ("logo-biobnd.jpg", "@getbiobnd"),
+    ("logo-meteronlabs.jpg", "@meteronlabs"),
 ]
 
 IG_STATS = [
@@ -105,11 +106,13 @@ body{background:#333;font-family:'Barlow';color:var(--paper)}
   text-transform:uppercase;color:var(--muted)}
 .moment{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
 .prow{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm}
-/* eleven main partners as a balanced 6 + 5 (30-col grid: six span-5s, then five span-6s) —
-   a third row would push the page into its footer */
-.prow.main{grid-template-columns:repeat(30,1fr);gap:3mm}
-.prow.main .pcardx{grid-column:span 6}
-.prow.main .pcardx:nth-child(-n+6){grid-column:span 5}
+.prow.main{grid-template-columns:repeat(5,1fr);gap:3mm}
+/* seven supporters as a balanced 4 + 3 (12-col grid: four span-3s, then three span-4s), in
+   compact cards so the second row still clears the page footer */
+.prow:not(.main){grid-template-columns:repeat(12,1fr);gap:3mm}
+.prow:not(.main) .pcardx{grid-column:span 4;padding:2.5mm 3mm;gap:1.5mm}
+.prow:not(.main) .pcardx:nth-child(-n+4){grid-column:span 3}
+.prow:not(.main) .pcardx img{max-height:8.5mm}
 .pcardx{border:1px solid var(--line);background:var(--panel);border-radius:2mm;padding:4mm 3mm;
   display:flex;flex-direction:column;align-items:center;gap:2mm;justify-content:center}
 .pcardx img{max-height:12mm;max-width:85%;object-fit:contain}
