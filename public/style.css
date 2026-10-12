@@ -336,6 +336,14 @@ a.logo-slot:hover,.logo-slot:hover{border-color:var(--gold-line);color:var(--gol
 .review-body{max-width:720px;margin:22px auto 0}
 .review-body p{margin-bottom:16px;color:var(--paper)}
 .review-body p:last-child{margin-bottom:0}
+/* longer reports carry their own section headings and lists */
+.review-body h3{font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:34px 0 14px}
+.review-body h3:first-child{margin-top:0}
+.review-body h4{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
+.review-body ul{list-style:none;margin:0 0 16px}
+.review-body li{position:relative;padding-left:26px;margin-bottom:9px;color:var(--paper)}
+.review-body li::before{content:"";position:absolute;left:0;top:.78em;width:13px;height:3px;background:var(--gold)}
+.review-body li strong{color:var(--gold-2);font-weight:600}
 /* the reviews index: one card per match, the whole card linking to that game's own page */
 .review-list{display:grid;gap:24px;margin-bottom:44px}
 .review-card{
