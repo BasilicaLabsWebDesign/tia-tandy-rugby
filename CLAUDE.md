@@ -16,6 +16,10 @@ versions are maintained, with no links between them:
   and shows the first fixture from today onwards, falling back to
   "Fixture details coming soon"; the full list is written out on
   `fixtures.html`, so a fixture change means updating both.
+  `fixtures.html` opens with the league table, copied by hand from
+  the standings the owner sends: rows in the order given, with no
+  position numbers, the T-Birds row marked `class="us"`, and the
+  "after …" date line under the heading moved on with each update.
 - **The one-pager** — the original navy/chalk/red match-programme
   page, unlisted at `/v2/` (`public/v2/index.html`) by owner
   instruction. Keep its facts in step, condensed to suit the
