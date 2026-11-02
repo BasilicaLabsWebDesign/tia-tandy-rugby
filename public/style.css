@@ -333,6 +333,7 @@ a.logo-slot:hover,.logo-slot:hover{border-color:var(--gold-line);color:var(--gol
 .league .pts{font-weight:700}
 .league .us>*{background:rgba(212,175,55,.12)}
 .league .us .team{color:var(--gold-2);box-shadow:inset 4px 0 0 var(--gold)}
+.table-foot{max-width:760px;margin-top:10px;font-size:14px;color:var(--muted)}
 
 /* ---- match reviews ---- */
 .review{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:34px 36px 28px;margin-bottom:44px}
