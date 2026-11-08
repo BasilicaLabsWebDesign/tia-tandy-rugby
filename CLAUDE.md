@@ -20,8 +20,10 @@ versions are maintained, with no links between them:
   the standings the owner sends: rows in the order given, with no
   position numbers, the T-Birds row marked `class="us"`, the
   "after …" date line under the heading moved on with each update,
-  and the line beneath the table kept true to how the standings
-  count points (as sent: four a win, no bonus points).
+  any note the standings carry (such as a points deduction) kept in
+  the box beneath the table, and the line under that kept true to
+  how the standings count points (as sent: four a win, two a draw,
+  no bonus points).
 - **The one-pager** — the original navy/chalk/red match-programme
   page, unlisted at `/v2/` (`public/v2/index.html`) by owner
   instruction. Keep its facts in step, condensed to suit the
@@ -43,7 +45,12 @@ top of `match-reviews.html` and a sitemap entry, with its clip in
 well to the card's 16:10 thumbnail, a trimmed `-thumb` copy beside it.
 Its chips carry the result and anything notable on the day (a try, an
 award) but never her position: she always plays hooker, so it goes
-without saying. The only script, `tools/build_pack_partners_page.py`,
+without saying. A fixture the T-Birds concede keeps its row on
+`fixtures.html` with "Conceded" in place of the kick-off, is marked
+`"conceded": true` in the homepage list so the Next Match band skips
+it, and gets a card only at the top of `match-reviews.html` (class
+`unplayed`: no thumbnail, no page, no sitemap entry) saying what
+happened, never written as Tia's words. The only script, `tools/build_pack_partners_page.py`,
 rebuilds the Numbers and Current
 Partners pages of the partnership-pack PDF and splices them back in.
 
